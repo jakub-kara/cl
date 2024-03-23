@@ -128,7 +128,7 @@ if __name__ == "__main__":
         n_traj = n_samples
     
     clusters = Clustering()
-    clusters.fit(blobs, pbc=[0])
+    clusters.fit(blobs, pbc=[0,1])
     #clusters.set_data(data)
 
     #print("Normalising data")

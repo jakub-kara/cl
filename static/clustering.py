@@ -45,8 +45,11 @@ class Clustering:
             self.data[j,:] -= np.amin(self.data[j,:])
             self.data[j,:] /= np.amax(self.data[j,:])
         
-        self.data[0] += 0.2
-        self.data[0] %= 1
+        #self.data[0] += 0.2
+        #self.data[0] %= 1
+        #self.data[1] -= 0.2
+        #self.data[1] %= 1
+
 
     def get_feature_vars(self):
         """
@@ -145,7 +148,7 @@ class Clustering:
 
         self.abs_contributions = dr.get_contributions_at_datapoints(
             self.data, self.feature_vars, self.labels_, 
-            self.coeff, self.n_clus)
+            self.coeff, self.pbc, self.n_clus, self.n_pts)
 
         for i in range(self.n_traj):
             if self.labels_[i] != np.argmax(self.abs_contributions[:,i]):
@@ -154,7 +157,7 @@ class Clustering:
 
         self.abs_contributions = dr.get_contributions_at_datapoints(
             self.data, self.feature_vars, self.labels_, 
-            self.coeff, self.n_clus)
+            self.coeff, self.pbc, self.n_clus, self.n_pts)
         
         self.cluster_sizes = np.zeros(self.n_clus)
         for clus1 in range(self.n_clus):
@@ -214,16 +217,17 @@ class Clustering:
                 if self.abs_contributions[clus1,i]+self.abs_contributions[clus2,i] < cluster_avg:
                     self.labels_[i] -= self.n_traj
 
-        n_pairs = int(np.sqrt(self.cluster_sizes[clus1])) * int(np.sqrt(self.cluster_sizes[clus2]))
+        n_pairs = int(np.ceil(self.cluster_sizes[clus1]**(1/self.n_features))) \
+                * int(np.ceil(self.cluster_sizes[clus2]**(1/self.n_features)))
         closest_pts = np.zeros((2, n_pairs), dtype=int, order="F")
         pair_dist = np.zeros((n_pairs))
 
-        closest_pts, pair_dist = dr.find_closest_points(
-            self.data, self.labels_, clus1, clus2, n_pairs)
+        closest_pts, pair_dist, path_vecs = dr.find_closest_points(
+            self.data, self.labels_, self.pbc, clus1, clus2, n_pairs, self.n_pts)
             
         self.merge_metric[clus1,clus2] = dr.compute_merge_metric(
-            self.data, self.feature_vars, self.labels_, closest_pts,
-            self.coeff, clus1, clus2, self.n_clus)
+            self.data, self.feature_vars, self.labels_, closest_pts, path_vecs,
+            self.coeff, self.pbc, clus1, clus2, self.n_clus, self.n_pts)
 
         self.merge_metric[clus1,clus2] *= np.sqrt(pair_dist[0])/nn_dist
         
@@ -374,6 +378,7 @@ class Clustering:
         self.positions_to_labels()
         print("Relabelling by contribution")
         self.relabel_by_contributions()
+        
         print("Merging clusters")
         self.merge_clusters()
 
