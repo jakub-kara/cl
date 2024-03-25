@@ -108,6 +108,9 @@ if __name__ == "__main__":
         noisy_circles, _ = datasets.make_circles(n_samples=n_samples, factor=0.5, noise=0.05)
         noisy_moons, _ = datasets.make_moons(n_samples=n_samples, noise=0.05)
         blobs, _ = datasets.make_blobs(n_samples=n_samples, random_state=8)
+        temp = np.amax(blobs[:,0]) - np.amin(blobs[:,0])
+        blobs[:,0] -= 0.4*temp
+        blobs[:,0] = np.mod(blobs[:,0], temp)
 
         blob, _ = datasets.make_blobs(n_samples=n_samples, centers=np.array([[0.5,0.5]]), cluster_std=0.05)
         no_structure, _ = np.random.rand(n_samples, 2), None
@@ -128,7 +131,8 @@ if __name__ == "__main__":
         n_traj = n_samples
     
     clusters = Clustering()
-    clusters.fit(blobs, pbc=[0,1])
+    clusters.fit(blobs, pbc=[0], ranges={0: [-20, 20]})
+    #clusters.fit(blobs, pbc=[0], ranges={0: [-10,15]})
     #clusters.set_data(data)
 
     #print("Normalising data")

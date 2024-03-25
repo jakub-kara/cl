@@ -1,14 +1,16 @@
-import density_routines
 import numpy as np
+import time
+import test
 
-data = np.array([[0,0],[1,1],[2,2]], dtype=float)
-feature_vars = np.array([1,1], dtype=float)/np.sqrt(2)
-use = np.array([0,1], dtype=int) + 1
-coords = np.array([0,0], dtype=int)
-coeff = 1
-density = np.float64(0)
+def g(x, s2):
+    return np.exp(-x**2/2/s2)
 
-print(density)
-density = density_routines.get_density_i4(density, \
-    data.T, feature_vars, use, coords, coeff)
-print(density)
+points = np.linspace(0,1,1000)
+
+t1 = time.time()
+for i in range(10000):
+    r = test.gs(points, 1)
+t2 = time.time()
+print(r)
+
+print(t2-t1)

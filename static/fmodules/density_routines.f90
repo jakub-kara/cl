@@ -293,7 +293,7 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 count = count+1
                 !if (count .eq. 100) return
                 at_coords2 = .true.
-                dist = n_features
+                dist = 1d10
 
                 do n = 1, n_features
                     if (path_dir(n) .ne. 0) then
@@ -310,7 +310,6 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                             call distance_from_line(temp, path_coords, coords2, path_vec(:,k), n_features)
                         end if
 
-                        write(*,*) temp
                         if (temp .lt. dist) then
                             dist = temp
                             temp_coords = path_coords
@@ -321,6 +320,7 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 end do
 
                 path_coords = temp_coords
+                
 200             do n = 1, n_features
                     at_coords2 = (at_coords2 .and. (nint(path_coords(n)) .eq. nint(coords2(n))))
                 end do

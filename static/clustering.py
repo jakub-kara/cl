@@ -42,13 +42,18 @@ class Clustering:
         """
 
         for j in range(self.n_features):
-            self.data[j,:] -= np.amin(self.data[j,:])
-            self.data[j,:] /= np.amax(self.data[j,:])
-        
-        #self.data[0] += 0.2
-        #self.data[0] %= 1
-        #self.data[1] -= 0.2
-        #self.data[1] %= 1
+            if j in self.feature_ranges.keys():
+                self.data[j,:] -= self.feature_ranges[j][0]
+                self.data[j,:] /= self.feature_ranges[j][1] - self.feature_ranges[j][0]
+                if np.amin(self.data[j,:]) < 0:
+                    print(f"Illegal minimum range in feature {j}")
+                    exit(1)
+                if np.amax(self.data[j,:]) > 1:
+                    print(f"Illegal maximum range in feature {j}")
+                    exit(1)
+            else:
+                self.data[j,:] -= np.amin(self.data[j,:])
+                self.data[j,:] /= np.amax(self.data[j,:])
 
 
     def get_feature_vars(self):
@@ -309,6 +314,9 @@ class Clustering:
             plt.xlim(min(self.data[0]), max(self.data[0]))
             plt.ylim(min(self.data[1]), max(self.data[1]))
 
+            plt.title("pbc = [0,1]")
+            plt.savefig("../pbc01")
+
             '''
             plt.scatter(
                 self.cluster_positions[0,:],
@@ -350,7 +358,7 @@ class Clustering:
 
             plt.show()
 
-    def fit(self, data, feature_vars=None, pbc=[]):
+    def fit(self, data, ranges={}, pbc=[]):
         """
         Master fitting method calling all the successive steps
         Clustering assignments can be accessed via the labels_ attribute
@@ -361,13 +369,11 @@ class Clustering:
 
         self.set_data(data)
 
-        if feature_vars is None:
-            print("Normalising data")
-            self.normalise_data()
-            print("Calculating feature variances")
-            self.get_feature_vars()
-        else:
-            self.feature_vars = feature_vars
+        print("Normalising data")
+        self.feature_ranges = ranges
+        self.normalise_data()
+        print("Calculating feature variances")
+        self.get_feature_vars()
         self.rescale_data()
         
         self.pbc = np.zeros(self.n_features, dtype=int)
