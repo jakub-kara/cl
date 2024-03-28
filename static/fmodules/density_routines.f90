@@ -335,10 +335,10 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 end do
 
                 path_coords = temp_coords
-                write(*,*) path_coords
-                write(*,*) coords1
-                write(*,*) coords2
-                write(*,*)
+                !write(*,*) path_coords
+                !write(*,*) coords1
+                !write(*,*) coords2
+                !write(*,*)
                 
 200             do n = 1, n_features
                     at_coords2 = (at_coords2 .and. (nint(path_coords(n)) .eq. nint(coords2(n))))
