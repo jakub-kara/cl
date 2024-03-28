@@ -1,4 +1,6 @@
 subroutine modri(a, p)
+    implicit none
+    
     real*8, intent(inout) :: a
     integer*4, intent(in) :: p
 
@@ -6,8 +8,40 @@ subroutine modri(a, p)
         a = a - p
     end do
     a = a + p
-    
 end subroutine modri
+
+subroutine mic(image, coords, point, pbc, n_features, n_pts)
+    implicit none
+    
+    integer*4, intent(in) :: n_features, n_pts, pbc(n_features)
+    real*8, intent(in) :: coords(n_features), point(n_features)
+    real*8, intent(out) :: image(n_features)
+
+    integer m
+    real*8 r2, temp, tcoords(n_features)
+
+    image = point
+    r2 = sum((image-coords)**2)
+    do m = 1, n_features
+        if (pbc(m) > 0) then
+            tcoords = point
+            tcoords(m) = tcoords(m) + n_pts
+            temp = sum((tcoords-coords)**2)
+            if (temp < r2) then
+                r2 = temp
+                image = tcoords
+            end if
+
+            tcoords = point
+            tcoords(m) = tcoords(m) - n_pts
+            temp = sum((tcoords-coords)**2)
+            if (temp < r2) then
+                r2 = temp
+                image = tcoords
+            end if
+        end if
+    end do
+end subroutine mic
 
 subroutine get_density_from_traj(density, dataset, feature_vars, coords, coeff, pbc, n_features, n_pts)
     implicit none
@@ -20,35 +54,16 @@ subroutine get_density_from_traj(density, dataset, feature_vars, coords, coeff, 
     real*8, intent(in) :: coeff    
 
     real*8 r2, temp, ocoords(n_features)
-    integer m, n
+    integer n
     
+    call mic(ocoords, coords, dataset, pbc, n_features, n_pts)
+
     r2 = 0
     do n = 1, n_features
-        temp = coords(n) - dataset(n)
+        temp = ocoords(n) - dataset(n)
         r2 = r2 + temp*temp/feature_vars(n)
     end do
     density = density + dexp(-coeff*r2)
-
-    do m = 1, n_features
-        if (pbc(m) > 0) then
-            ocoords = coords
-            ocoords(m) = ocoords(m) + n_pts
-            r2 = 0
-            do n = 1, n_features
-                temp = ocoords(n) - dataset(n)
-                r2 = r2 + temp*temp/feature_vars(n)
-            end do
-            density = density + dexp(-coeff*r2)
-
-            ocoords(m) = ocoords(m) -2*n_pts
-            r2 = 0
-            do n = 1, n_features
-                temp = ocoords(n) - dataset(n)
-                r2 = r2 + temp*temp/feature_vars(n)
-            end do
-            density = density + dexp(-coeff*r2)
-        end if
-    end do
 end subroutine get_density_from_traj
 
 subroutine get_density(density, dataset, feature_vars, coords, coeff, pbc, n_traj, n_features, n_pts)
@@ -298,7 +313,7 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 do n = 1, n_features
                     if (path_dir(n) .ne. 0) then
                         path_coords(n) = path_coords(n) + path_dir(n)
-                        if ((path_coords(n) < 0) .or. (path_coords(n) > n_pts - 1)) then
+                        if ((path_coords(n) < 0) .or. (path_coords(n) > n_pts - 1) .and. (pbc(n) > 0)) then
                             use1 = .false.
                             call modri(path_coords(n), n_pts)
                             goto 200
@@ -320,6 +335,10 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 end do
 
                 path_coords = temp_coords
+                write(*,*) path_coords
+                write(*,*) coords1
+                write(*,*) coords2
+                write(*,*)
                 
 200             do n = 1, n_features
                     at_coords2 = (at_coords2 .and. (nint(path_coords(n)) .eq. nint(coords2(n))))
@@ -459,61 +478,61 @@ subroutine generate_grid_2d(grid, dataset, feature_vars, coeff, pbc, n_pts, n_tr
     end do
 end subroutine generate_grid_2d
 
-!subroutine get_gradient(gradient, coords, dataset, feature_vars, coeff, n_traj, n_features)
-!    implicit none
-!    
-!    integer*4, intent(in) :: n_traj, n_features
-!
-!    real*8, intent(in) :: dataset(n_features, n_traj), feature_vars(n_features)
-!    real*8, intent(in) :: coeff
-!
-!    real*8, intent(in) :: coords(n_features)
-!    real*8, intent(out) :: gradient(n_features)
-!
-!    real*8 density
-!    integer i, n
-!
-!    gradient = 0
-!    do i = 1, n_traj
-!        density = 0
-!        call get_density_from_traj(density, dataset(:,i), feature_vars, coords, coeff, n_features)
-!        do n = 1, n_features
-!            gradient(n) = gradient(n) - 2*(coords(n) - dataset(n,i))/feature_vars(n) * density
-!        end do
-!    end do
-!end subroutine get_gradient
-!
-!subroutine get_hessian(hessian, coords, dataset, feature_vars, coeff, n_traj, n_features)
-!    implicit none
-!    
-!    integer*4, intent(in) :: n_traj, n_features
-!
-!    real*8, intent(in) :: dataset(n_features, n_traj), feature_vars(n_features)
-!    real*8, intent(in) :: coeff
-!
-!    real*8, intent(in) :: coords(n_features)
-!    real*8, intent(out) :: hessian(n_features, n_features)
-!
-!    real*8 density, temp
-!    integer i, m, n
-!
-!    do i = 1, n_traj
-!        density = 0
-!        call get_density_from_traj(density, dataset(:,i), feature_vars, coords, coeff, n_features)
-!        do m = 1, n_features
-!            do n = 1, m-1
-!                hessian(n, m) = hessian(n, m) + 4*(coords(n) - dataset(n,i))*(coords(m) - dataset(m,i)) &
-!                    & /(feature_vars(n)*feature_vars(m)) * density
-!                hessian(m,n) = hessian(n,m)    
-!            end do
-!            
-!            temp = coords(m) - dataset(m,i)
-!            hessian(m,m) = 2*density/feature_vars(m) * (2*temp*temp/feature_vars(m) - 1)
-!        end do
-!    end do
-!end subroutine get_hessian
-!
-!
+subroutine get_gradient(gradient, dataset, feature_vars, coords, coeff, pbc, n_traj, n_features, n_pts)
+    implicit none
+    
+    integer*4, intent(in) :: n_traj, n_features, n_pts, pbc(n_features)
+
+    real*8, intent(in) :: dataset(n_features, n_traj), feature_vars(n_features)
+    real*8, intent(in) :: coeff
+
+    real*8, intent(in) :: coords(n_features)
+    real*8, intent(out) :: gradient(n_features)
+
+    real*8 density
+    integer i, n
+
+    gradient = 0
+    do i = 1, n_traj
+        density = 0
+        call get_density_from_traj(density, dataset(:,i), feature_vars, coords, coeff, pbc, n_features, n_pts)
+        do n = 1, n_features
+            gradient(n) = gradient(n) - 2*(coords(n) - dataset(n,i))/feature_vars(n) * density
+        end do
+    end do
+end subroutine get_gradient
+
+subroutine get_hessian(hessian, dataset, feature_vars, coords, coeff, pbc, n_traj, n_features, n_pts)
+    implicit none
+    
+    integer*4, intent(in) :: n_traj, n_features, n_pts, pbc(n_features)
+
+    real*8, intent(in) :: dataset(n_features, n_traj), feature_vars(n_features)
+    real*8, intent(in) :: coeff
+
+    real*8, intent(in) :: coords(n_features)
+    real*8, intent(out) :: hessian(n_features, n_features)
+
+    real*8 density, temp
+    integer i, m, n
+
+    do i = 1, n_traj
+        density = 0
+        call get_density_from_traj(density, dataset(:,i), feature_vars, coords, coeff, pbc, n_features, n_pts)
+        do m = 1, n_features
+            do n = 1, m-1
+                hessian(n, m) = hessian(n, m) + 4*(coords(n) - dataset(n,i))*(coords(m) - dataset(m,i)) &
+                    & /(feature_vars(n)*feature_vars(m)) * density
+                hessian(m,n) = hessian(n,m)    
+            end do
+            
+            temp = coords(m) - dataset(m,i)
+            hessian(m,m) = 2*density/feature_vars(m) * (2*temp*temp/feature_vars(m) - 1)
+        end do
+    end do
+end subroutine get_hessian
+
+
 !subroutine gradient_ascend(output, dataset, feature_vars, coeff, n_traj, n_features)
 !    implicit none
 !    
