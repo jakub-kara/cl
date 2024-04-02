@@ -144,7 +144,7 @@ subroutine find_closest_points(closest_pts, pair_dist, path_vec, dataset, cluste
     integer*4, intent(in) :: clusters(n_traj)
 
     integer i, j, c, d, n
-    real*8 r2, temp, vec(n_features), ocoords(n_features)
+    real*8 r2, temp, vec(n_features), ocoords(n_features), x2
     pair_dist = 1d307
     do i = 1, n_traj
         if (clusters(i) .ne. clus1) cycle
@@ -152,27 +152,28 @@ subroutine find_closest_points(closest_pts, pair_dist, path_vec, dataset, cluste
         do j = 1, n_traj
             if (clusters(j) .ne. clus2) cycle
 
-            r2 = sum((nint(dataset(:,i)) - nint(dataset(:,j)))**2)
-            vec = (nint(dataset(:,j)) - nint(dataset(:,i)))/sqrt(r2)
+            r2 = 0
             do n = 1, n_features
+                ocoords(n) = dataset(n,i)
+                x2 = (nint(ocoords(n)) - nint(dataset(n,j)))**2
                 if (pbc(n) > 0) then
-                    ocoords = dataset(:,i)
-                    ocoords(n) = ocoords(n) + n_pts
-                    temp = sum((ocoords - dataset(:,j))**2)
-                    if (temp < r2) then
-                        r2 = temp
-                        vec = (dataset(:,j) - ocoords)/sqrt(r2)
+                    temp = (nint(dataset(n,i)) + n_pts - nint(dataset(n,j)))**2
+                    if (temp < x2) then
+                        ocoords(n) = dataset(n,i) + n_pts
+                        x2 = temp
                     end if
 
-                    ocoords(n) = ocoords(n) - 2*n_pts
-                    temp = sum((ocoords - dataset(:,j))**2)
-                    if (temp < r2) then
-                        r2 = temp
-                        vec = (dataset(:,j) - ocoords)/sqrt(r2)
+                    temp = (nint(dataset(n,i)) - n_pts - nint(dataset(n,j)))**2
+                    if (temp < x2) then
+                        ocoords(n) = dataset(n,i) - n_pts
+                        x2 = temp
                     end if
                 end if
             end do
-            
+
+            r2 = sum((nint(ocoords) - nint(dataset(:,j)))**2)
+            vec = -(nint(ocoords) - nint(dataset(:,j)))/sqrt(r2)
+
             do c = 1, n_pairs
                 if (r2 .lt. pair_dist(c)) then
                     do d = n_pairs, c+1, -1
@@ -223,7 +224,7 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
     real*8 path_coords(n_features)
     real*8 contributions(n_clus)
     integer path_dir(n_features)
-    logical at_coords2, use1
+    logical at_coords2
     integer j, k, n, count
 
     metric = n_traj
@@ -276,7 +277,7 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 &density2, dataset, feature_vars, coords2, clusters, coeff, pbc, clus2, n_traj, n_features, n_pts)
             call get_density_from_cluster(&
                 &density2, dataset, feature_vars, coords2, clusters, coeff, pbc, clus2-n_traj, n_traj, n_features, n_pts)
-            
+             
             density_mid = density1
 
             do n = 1, n_features
@@ -287,7 +288,6 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
 
             at_coords2 = .false.
             count = 0
-            use1 = .true.
 
             do while (.not. at_coords2)
                 count = count+1
@@ -298,28 +298,37 @@ subroutine compute_merge_metric(metric, dataset, feature_vars, clusters, closest
                 do n = 1, n_features
                     if (path_dir(n) .ne. 0) then
                         path_coords(n) = path_coords(n) + path_dir(n)
-                        if ((path_coords(n) < 0) .or. (path_coords(n) > n_pts - 1)) then
-                            use1 = .false.
-                            call modri(path_coords(n), n_pts)
+                        if ((path_coords(n) < 0) .and. (pbc(n) > 0)) then
+                            path_coords(n) = path_coords(n) + n_pts
+                            coords1(n) = coords1(n) + n_pts
                             goto 200
                         end if
-                        
-                        if (use1) then
-                            call distance_from_line(temp, path_coords, coords1, path_vec(:,k), n_features)
-                        else
-                            call distance_from_line(temp, path_coords, coords2, path_vec(:,k), n_features)
+                        if ((path_coords(n) > n_pts - 1 ) .and. (pbc(n) > 0)) then
+                            path_coords(n) = path_coords(n) - n_pts
+                            coords1(n) = coords1(n) - n_pts
+                            go to 200
                         end if
+                        
+                        call distance_from_line(temp, path_coords, coords1, path_vec(:,k), n_features)
 
+                        !write(*,*) path_coords
+                        !write(*,*) temp, dist
                         if (temp .lt. dist) then
                             dist = temp
                             temp_coords = path_coords
                         end if
                         path_coords(n) = path_coords(n) - path_dir(n)
-                        call modri(path_coords(n), n_pts)
+                        !call modri(path_coords(n), n_pts)
                     end if
                 end do
 
                 path_coords = temp_coords
+                !write(*,*) path_coords
+                !write(*,*) coords1
+                !write(*,*) coords2
+                !write(*,*) path_vec(:,k)
+                !write(*,*)
+
                 
 200             do n = 1, n_features
                     at_coords2 = (at_coords2 .and. (nint(path_coords(n)) .eq. nint(coords2(n))))
@@ -478,7 +487,7 @@ subroutine get_gradient(gradient, dataset, feature_vars, coords, coeff, pbc, n_t
         density = 0
         call get_density_from_traj(density, dataset(:,i), feature_vars, coords, coeff, pbc, n_features, n_pts)
         do n = 1, n_features
-            gradient(n) = gradient(n) - 2*(coords(n) - dataset(n,i))/feature_vars(n) * density
+            gradient(n) = gradient(n) - 2*coeff*(coords(n) - dataset(n,i))/feature_vars(n) * density
         end do
     end do
 end subroutine get_gradient
@@ -497,18 +506,19 @@ subroutine get_hessian(hessian, dataset, feature_vars, coords, coeff, pbc, n_tra
     real*8 density, temp
     integer i, m, n
 
+    hessian = 0
     do i = 1, n_traj
         density = 0
         call get_density_from_traj(density, dataset(:,i), feature_vars, coords, coeff, pbc, n_features, n_pts)
         do m = 1, n_features
             do n = 1, m-1
-                hessian(n, m) = hessian(n, m) + 4*(coords(n) - dataset(n,i))*(coords(m) - dataset(m,i)) &
+                hessian(n, m) = hessian(n, m) + 4*coeff**2*(coords(n) - dataset(n,i))*(coords(m) - dataset(m,i)) &
                     & /(feature_vars(n)*feature_vars(m)) * density
                 hessian(m,n) = hessian(n,m)    
             end do
             
             temp = coords(m) - dataset(m,i)
-            hessian(m,m) = 2*density/feature_vars(m) * (2*temp*temp/feature_vars(m) - 1)
+            hessian(m,m) = hessian(m,m) + 2*coeff*density/feature_vars(m) * (2*coeff*temp*temp/feature_vars(m) - 1)
         end do
     end do
 end subroutine get_hessian
