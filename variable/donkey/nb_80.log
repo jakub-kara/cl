@@ -1,0 +1,1228 @@
+DONKEY Clustering
+Number of datapoints: 639
+Number of features:   2
+Periodic features:    []
+
+1. Covariance Optimisation
+Convergence threshold: 1e-08
+
+Initial guess
+[[1. 0.]
+ [0. 1.]]
+Iteration 1
+Error: 1.7363165678014827
+[[ 2.15173484e-01 -1.71948968e-05]
+ [-1.71948968e-05  4.85443380e-02]]
+Iteration 2
+Error: 0.12212860261913873
+[[ 0.12392716 -0.00076306]
+ [-0.00076306  0.01915378]]
+Iteration 3
+Error: 0.0573858646149072
+[[ 0.07671088 -0.00094875]
+ [-0.00094875  0.00935559]]
+Iteration 4
+Error: 0.03530939183284508
+[[ 0.04502646 -0.00079636]
+ [-0.00079636  0.0060354 ]]
+Iteration 5
+Error: 0.020981188371135544
+[[ 0.0260022  -0.00062651]
+ [-0.00062651  0.00441817]]
+Iteration 6
+Error: 0.010731772552927803
+[[ 0.01653597 -0.00047714]
+ [-0.00047714  0.00345136]]
+Iteration 7
+Error: 0.005650708533414187
+[[ 0.01175306 -0.00035968]
+ [-0.00035968  0.00281848]]
+Iteration 8
+Error: 0.0033060312861134308
+[[ 0.00906511 -0.00026927]
+ [-0.00026927  0.00238123]]
+Iteration 9
+Error: 0.002098334469850868
+[[ 0.00742049 -0.00019933]
+ [-0.00019933  0.00206739]]
+Iteration 10
+Error: 0.0014104086689692573
+[[ 0.0063519  -0.00014437]
+ [-0.00014437  0.00183548]]
+Iteration 11
+Error: 0.0009892036440814925
+[[ 0.00562627 -0.00010034]
+ [-0.00010034  0.00165998]]
+Iteration 12
+Error: 0.0007167042258103319
+[[ 5.11686420e-03 -6.44261012e-05]
+ [-6.44261012e-05  1.52450833e-03]]
+Iteration 13
+Error: 0.0005325110252180342
+[[ 4.75009072e-03 -3.47211205e-05]
+ [-3.47211205e-05  1.41818075e-03]]
+Iteration 14
+Error: 0.00040355174276265817
+[[ 4.48089890e-03 -9.85029475e-06]
+ [-9.85029475e-06  1.33356248e-03]]
+Iteration 15
+Error: 0.0003106778229559347
+[[4.28046804e-03 1.12026584e-05]
+ [1.12026584e-05 1.26542142e-03]]
+Iteration 16
+Error: 0.00024224763719665185
+[[4.12965640e-03 2.92042429e-05]
+ [2.92042429e-05 1.20998859e-03]]
+Iteration 17
+Error: 0.00019087885693109288
+[[4.01533577e-03 4.47358350e-05]
+ [4.47358350e-05 1.16449355e-03]]
+Iteration 18
+Error: 0.00015172031245373491
+[[3.92825290e-03 5.82399323e-05]
+ [5.82399323e-05 1.12686430e-03]]
+Iteration 19
+Error: 0.00012148644128552336
+[[3.86173447e-03 7.00555913e-05]
+ [7.00555913e-05 1.09552760e-03]]
+Iteration 20
+Error: 9.789343709467395e-05
+[[3.81087581e-03 8.04455252e-05]
+ [8.04455252e-05 1.06927270e-03]]
+Iteration 21
+Error: 7.931740165781863e-05
+[[3.77201618e-03 8.96163583e-05]
+ [8.96163583e-05 1.04715659e-03]]
+Iteration 22
+Error: 6.458048517420467e-05
+[[3.74238961e-03 9.77334463e-05]
+ [9.77334463e-05 1.02843686e-03]]
+Iteration 23
+Error: 5.2813391855571046e-05
+[[0.00371989 0.00010493]
+ [0.00010493 0.00101252]]
+Iteration 24
+Error: 4.336480819989964e-05
+[[0.00370288 0.00011132]
+ [0.00011132 0.00099894]]
+Iteration 25
+Error: 3.574036554185268e-05
+[[0.00369013 0.000117  ]
+ [0.000117   0.00098731]]
+Iteration 26
+Error: 2.9560636254660592e-05
+[[0.00368066 0.00012205]
+ [0.00012205 0.00097732]]
+Iteration 27
+Error: 2.45316493470866e-05
+[[0.0036737  0.00012653]
+ [0.00012653 0.00096871]]
+Iteration 28
+Error: 2.0423810957452982e-05
+[[0.00366868 0.00013052]
+ [0.00013052 0.00096128]]
+Iteration 29
+Error: 1.705658140673742e-05
+[[0.00366514 0.00013406]
+ [0.00013406 0.00095484]]
+Iteration 30
+Error: 1.4287168222804156e-05
+[[0.00366273 0.0001372 ]
+ [0.0001372  0.00094925]]
+Iteration 31
+Error: 1.2002068331784619e-05
+[[0.00366115 0.00013999]
+ [0.00013999 0.0009444 ]]
+Iteration 32
+Error: 1.0110661136553513e-05
+[[0.00366021 0.00014246]
+ [0.00014246 0.00094017]]
+Iteration 33
+Error: 8.540318903972643e-06
+[[0.00365974 0.00014465]
+ [0.00014465 0.00093648]]
+Iteration 34
+Error: 7.232626586115649e-06
+[[0.0036596  0.00014659]
+ [0.00014659 0.00093326]]
+Iteration 35
+Error: 6.3522705420035095e-06
+[[0.00365971 0.0001483 ]
+ [0.0001483  0.00093045]]
+Iteration 36
+Error: 5.771774887881464e-06
+[[0.00365998 0.00014982]
+ [0.00014982 0.00092799]]
+Iteration 37
+Error: 5.225316996036061e-06
+[[0.00366037 0.00015116]
+ [0.00015116 0.00092583]]
+Iteration 38
+Error: 4.715812619474286e-06
+[[0.00366082 0.00015235]
+ [0.00015235 0.00092393]]
+Iteration 39
+Error: 4.244460867876829e-06
+[[0.00366131 0.00015339]
+ [0.00015339 0.00092227]]
+Iteration 40
+Error: 3.811215851532389e-06
+[[0.00366181 0.00015431]
+ [0.00015431 0.00092081]]
+Iteration 41
+Error: 3.415137830241734e-06
+[[0.00366232 0.00015513]
+ [0.00015513 0.00091953]]
+Iteration 42
+Error: 3.054690073860144e-06
+[[0.00366281 0.00015585]
+ [0.00015585 0.0009184 ]]
+Iteration 43
+Error: 2.727946200697549e-06
+[[0.00366328 0.00015648]
+ [0.00015648 0.00091741]]
+Iteration 44
+Error: 2.4327408295754397e-06
+[[0.00366372 0.00015704]
+ [0.00015704 0.00091653]]
+Iteration 45
+Error: 2.1667968116839144e-06
+[[0.00366414 0.00015753]
+ [0.00015753 0.00091576]]
+Iteration 46
+Error: 1.9278137657589714e-06
+[[0.00366452 0.00015796]
+ [0.00015796 0.00091509]]
+Iteration 47
+Error: 1.7135193089854372e-06
+[[0.00366488 0.00015834]
+ [0.00015834 0.00091449]]
+Iteration 48
+Error: 1.5217406411283845e-06
+[[0.0036652  0.00015868]
+ [0.00015868 0.00091396]]
+Iteration 49
+Error: 1.3503875199029998e-06
+[[0.0036655  0.00015897]
+ [0.00015897 0.0009135 ]]
+Iteration 50
+Error: 1.1975136352284613e-06
+[[0.00366577 0.00015923]
+ [0.00015923 0.00091309]]
+Iteration 51
+Error: 1.0613033637730759e-06
+[[0.00366601 0.00015946]
+ [0.00015946 0.00091273]]
+Iteration 52
+Error: 9.400775508667169e-07
+[[0.00366623 0.00015966]
+ [0.00015966 0.00091241]]
+Iteration 53
+Error: 8.322971466703149e-07
+[[0.00366643 0.00015983]
+ [0.00015983 0.00091212]]
+Iteration 54
+Error: 7.365570657501784e-07
+[[0.00366661 0.00015999]
+ [0.00015999 0.00091188]]
+Iteration 55
+Error: 6.515818874409051e-07
+[[0.00366677 0.00016012]
+ [0.00016012 0.00091166]]
+Iteration 56
+Error: 5.762096886142531e-07
+[[0.00366691 0.00016024]
+ [0.00016024 0.00091146]]
+Iteration 57
+Error: 5.094020980101529e-07
+[[0.00366704 0.00016035]
+ [0.00016035 0.00091129]]
+Iteration 58
+Error: 4.502147851441897e-07
+[[0.00366716 0.00016044]
+ [0.00016044 0.00091114]]
+Iteration 59
+Error: 3.9780688977202874e-07
+[[0.00366726 0.00016052]
+ [0.00016052 0.00091101]]
+Iteration 60
+Error: 3.514220484410061e-07
+[[0.00366735 0.00016059]
+ [0.00016059 0.00091089]]
+Iteration 61
+Error: 3.1038643877226e-07
+[[0.00366743 0.00016065]
+ [0.00016065 0.00091079]]
+Iteration 62
+Error: 2.7409652913351363e-07
+[[0.00366751 0.00016071]
+ [0.00016071 0.00091069]]
+Iteration 63
+Error: 2.420070210881536e-07
+[[0.00366757 0.00016076]
+ [0.00016076 0.00091061]]
+Iteration 64
+Error: 2.1364820999077595e-07
+[[0.00366763 0.0001608 ]
+ [0.0001608  0.00091054]]
+Iteration 65
+Error: 1.8858861588718408e-07
+[[0.00366768 0.00016084]
+ [0.00016084 0.00091048]]
+Iteration 66
+Error: 1.6644716361642218e-07
+[[0.00366772 0.00016087]
+ [0.00016087 0.00091042]]
+Iteration 67
+Error: 1.4689251634378503e-07
+[[0.00366777 0.0001609 ]
+ [0.0001609  0.00091037]]
+Iteration 68
+Error: 1.296209703599018e-07
+[[0.0036678  0.00016092]
+ [0.00016092 0.00091033]]
+Iteration 69
+Error: 1.1437473779808997e-07
+[[0.00366783 0.00016094]
+ [0.00016094 0.00091029]]
+Iteration 70
+Error: 1.0091098095679632e-07
+[[0.00366786 0.00016096]
+ [0.00016096 0.00091025]]
+Iteration 71
+Error: 8.902810304581548e-08
+[[0.00366789 0.00016098]
+ [0.00016098 0.00091022]]
+Iteration 72
+Error: 7.85387008172796e-08
+[[0.00366791 0.00016099]
+ [0.00016099 0.0009102 ]]
+Iteration 73
+Error: 6.928238034306904e-08
+[[0.00366793 0.00016101]
+ [0.00016101 0.00091017]]
+Iteration 74
+Error: 6.111356872195691e-08
+[[0.00366795 0.00016102]
+ [0.00016102 0.00091015]]
+Iteration 75
+Error: 5.390595916746153e-08
+[[0.00366796 0.00016103]
+ [0.00016103 0.00091014]]
+Iteration 76
+Error: 4.754712190705975e-08
+[[0.00366797 0.00016104]
+ [0.00016104 0.00091012]]
+Iteration 77
+Error: 4.193748690515826e-08
+[[0.00366799 0.00016105]
+ [0.00016105 0.0009101 ]]
+Iteration 78
+Error: 3.698715051695268e-08
+[[0.003668   0.00016105]
+ [0.00016105 0.00091009]]
+Iteration 79
+Error: 3.262106664143633e-08
+[[0.00366801 0.00016106]
+ [0.00016106 0.00091008]]
+Iteration 80
+Error: 2.8769444644616803e-08
+[[0.00366802 0.00016106]
+ [0.00016106 0.00091007]]
+Iteration 81
+Error: 2.5373512334682467e-08
+[[0.00366802 0.00016107]
+ [0.00016107 0.00091006]]
+Iteration 82
+Error: 2.2374254210922196e-08
+[[0.00366803 0.00016107]
+ [0.00016107 0.00091005]]
+Iteration 83
+Error: 1.973494818811091e-08
+[[0.00366804 0.00016108]
+ [0.00016108 0.00091005]]
+Iteration 84
+Error: 1.7402918524387755e-08
+[[0.00366804 0.00016108]
+ [0.00016108 0.00091004]]
+Iteration 85
+Error: 1.534762928702936e-08
+[[0.00366805 0.00016108]
+ [0.00016108 0.00091004]]
+Iteration 86
+Error: 1.353320976034975e-08
+[[0.00366805 0.00016108]
+ [0.00016108 0.00091003]]
+Iteration 87
+Error: 1.1933650251848022e-08
+[[0.00366805 0.00016109]
+ [0.00016109 0.00091003]]
+Iteration 88
+Error: 1.0523397328727774e-08
+[[0.00366806 0.00016109]
+ [0.00016109 0.00091002]]
+Convergence reached in 89 iterations
+[[0.00366806 0.00016109]
+ [0.00016109 0.00091002]]
+
+Abamson correction active
+Local covariance matrices saved in nb_80.cov.npy
+Local coefficients
+[0.63688    0.70704773 0.58598684 0.66742929 0.87954163 0.75614992
+ 0.90396634 0.81910328 0.58590673 0.66504174 0.69075872 0.74508013
+ 0.90000238 4.39405633 0.71066876 0.71554038 0.88247734 0.67237368
+ 0.7323751  1.0849699  0.74666026 0.6338973  0.8914644  0.83080261
+ 1.18315791 1.56320918 2.45112153 0.63021493 1.20941998 3.25117522
+ 1.26383855 0.75023325 2.91687715 1.06901485 1.124469   2.08177292
+ 0.70396288 0.59584966 0.89936189 1.36372242 0.61626077 0.84553702
+ 1.28545868 0.85174613 1.31875948 1.26240952 0.66214288 0.66251146
+ 1.18016846 0.86005841 0.61776274 0.7131837  0.8360229  0.69756161
+ 0.8768089  1.15813253 1.96546134 0.6911935  0.55850025 0.76394854
+ 0.65351669 1.76705403 0.96682886 0.97789923 0.88204593 0.73301561
+ 1.15176355 1.78561505 0.87232362 3.61947943 2.49758674 0.70209176
+ 0.70797695 0.61769556 0.91093597 0.7559995  3.11252944 0.83386035
+ 0.85720406 0.70461406 0.63151984 0.790818   0.76816936 1.09397276
+ 0.87077775 0.67810045 0.71289251 0.70707738 0.63658422 0.68033929
+ 0.74645639 4.51926709 2.34723993 0.66473213 0.66075213 1.42224529
+ 1.5720295  0.65719161 1.22442878 0.56423834 0.79994179 0.96579778
+ 1.38876747 3.84690892 0.77983878 1.10784257 0.73576499 1.00916541
+ 0.6683956  0.55678791 3.72300626 3.98199643 0.67045679 1.43590314
+ 0.94315204 0.63305793 0.85633188 2.29805488 1.04817919 0.83862713
+ 0.61212882 0.9461135  1.94656798 1.48401612 1.10239382 1.14059705
+ 2.11116472 1.04100966 1.07198817 2.09030138 1.50907274 1.92194913
+ 2.85340727 0.59139577 0.55944558 0.62680245 1.4174058  1.72234148
+ 0.66830346 0.70571953 0.60589907 1.0435533  0.81078248 0.90622586
+ 0.87793635 1.46297572 1.3858535  1.03483138 0.82801057 1.02796657
+ 0.92136124 1.20690639 1.29372747 0.57864081 2.69549616 1.198746
+ 0.56572897 1.03971587 1.00088761 0.63011073 1.03184743 0.57827315
+ 0.77114542 0.91562894 0.90281512 0.75339197 0.5582307  1.03831001
+ 2.49348953 0.78438791 1.02712149 0.99814032 0.73211991 0.74985912
+ 0.85441215 0.75369002 0.70511889 0.65629133 1.51486526 0.65769135
+ 1.03306251 1.0681208  0.67822868 0.76695473 1.07632312 0.67921628
+ 4.61353945 0.83718265 3.82377209 0.63422471 1.38512083 0.69562442
+ 0.95432083 1.76283059 1.32207297 0.96280215 0.69560305 0.77151414
+ 2.86597097 0.64735543 0.61938127 0.65505679 0.63429919 1.69525297
+ 2.55692995 0.68401903 0.64846949 1.27177499 1.36958599 1.01608413
+ 1.86907008 0.73437428 0.89651401 0.58384649 0.744903   1.90092902
+ 1.12881757 2.86576135 0.58198467 0.65180145 1.29000963 1.19286101
+ 0.62059961 1.59713688 0.7045586  0.62183184 1.86152505 1.4991512
+ 0.85645197 1.60711611 0.8709149  1.24715021 0.78113954 0.94275398
+ 0.71642603 1.76370584 0.64411679 0.66048437 0.7107191  3.09747945
+ 0.65112166 2.64275896 1.03129811 1.01098154 0.58748398 1.14138113
+ 0.65530952 1.00629871 0.70645999 0.93504057 0.58863938 0.67411979
+ 3.50358445 0.87944657 3.4165262  1.90653121 0.58909563 0.7390329
+ 0.71001611 2.35133089 2.99390624 0.80921024 0.96353199 1.14289754
+ 0.860493   1.6985899  0.61948118 0.56231866 0.70072829 1.07843466
+ 0.55826172 0.66520877 0.83639189 0.69477823 1.06666333 0.55750619
+ 3.18305043 0.73718415 0.56232731 1.74754879 0.93469697 0.7542697
+ 1.32619544 0.62434539 1.14221005 3.13848128 0.91912955 1.58614314
+ 2.41184135 0.776298   0.62035471 0.90979214 0.64990726 0.59794991
+ 1.13677187 1.45308508 0.79556907 0.61525774 0.94330774 0.94256929
+ 0.83694704 2.3404432  2.37026525 0.61518765 0.576189   0.77522449
+ 2.05177713 0.56354197 0.63100882 1.93286502 0.66789152 1.84074877
+ 0.6523237  1.1252973  0.69134167 0.67916471 1.25349868 2.20289717
+ 0.74196104 3.6125655  0.62347145 0.64507069 0.62728803 2.13385824
+ 1.14134356 0.68158682 2.57768152 1.03338436 0.89793838 0.58947716
+ 3.29750968 1.02232283 0.80834421 1.05360644 0.71342097 0.91398849
+ 1.60897665 0.87986022 0.89085095 0.80724265 0.89444732 0.647701
+ 0.8422685  0.64721016 0.77486546 0.72118896 0.99269588 1.25656591
+ 0.7742129  0.78647424 0.94740647 1.19995738 1.03039783 1.26152108
+ 0.66317236 0.58400975 2.03929567 1.84224427 1.07387039 0.62391823
+ 2.72250184 0.89072658 0.95126757 0.60578767 0.68039316 0.95834952
+ 2.20770953 0.91008735 0.73681529 1.94281388 0.81625709 1.87439902
+ 0.69746506 0.92229494 0.66593069 3.4084815  0.84598489 0.62523727
+ 2.17984218 0.62862529 1.36875521 0.72762137 0.67200719 1.19771639
+ 0.81900772 1.07262662 1.77960243 1.15857053 0.72372683 0.58411982
+ 2.28451794 0.63102393 0.65780421 0.9541317  0.84651591 0.76256886
+ 0.82795176 0.7974964  0.62561989 1.65423644 0.80311172 0.78667747
+ 1.27920261 0.74225196 0.62095041 0.8335987  2.24136153 0.68028399
+ 1.0167925  0.66557907 0.63106675 1.59751636 0.62726521 0.85502
+ 0.60953451 0.72924998 0.74389933 0.66146806 0.98363056 0.70163937
+ 1.94779686 0.59051    1.98777776 0.7121824  0.68991191 0.73518047
+ 1.67074406 4.1028972  2.49062789 1.6313984  0.56539247 0.84030718
+ 0.69226528 1.24235396 0.79910145 0.83478254 0.80749601 1.17432543
+ 1.08532294 2.63539566 0.91563123 0.5613249  0.77013745 0.60939422
+ 1.2899974  0.56313025 0.99800017 1.92570723 0.73738171 1.00725187
+ 0.70523234 1.94289948 0.60247243 0.89016737 0.9926395  0.76910265
+ 1.0182936  0.84758949 0.67052666 0.71932438 0.74734394 0.61583716
+ 2.1471673  0.5617646  0.55704449 0.69340815 2.68024315 0.57247728
+ 3.87963578 2.81023431 0.95612749 1.87435677 0.82268231 0.67029762
+ 0.94785138 1.33056865 2.25802998 1.07662626 0.57546837 0.55453479
+ 0.62625623 1.17574642 1.79479708 1.57708475 1.38242768 0.68952522
+ 1.37660667 0.96105561 1.91179641 0.56992379 0.62077666 0.65511997
+ 0.68721342 2.33887247 0.6829438  1.02548448 0.70951655 0.62093345
+ 0.59366357 0.55367094 0.63908678 0.89719765 1.41268779 2.30249767
+ 3.53141905 0.71054372 0.73540774 1.21720026 2.72367176 0.95639423
+ 0.81953237 1.05700344 0.6629363  1.05130294 3.97076059 1.67245405
+ 1.10768018 0.7057619  0.94735692 0.93936623 0.82387502 0.61549135
+ 0.77333503 0.95253992 0.88115099 0.85414369 1.012977   1.33530503
+ 1.01006045 0.76627521 1.29989214 0.58866954 0.56446872 0.55671296
+ 3.84284039 0.71174102 4.26606323 1.726598   0.63824114 0.95470649
+ 0.61308186 0.60866443 0.84652797 0.97285671 0.86951421 0.69371345
+ 0.78128782 0.56332807 0.77851834 2.58866238 1.10257593 0.79442415
+ 0.80015622 0.66848648 0.72444117 0.64073763 0.69997587 0.62443671
+ 0.87148847 0.76081432 0.94544818 0.69196568 2.03477085 0.68429952
+ 0.70966121 0.64271873 0.63788418 0.90935207 0.60584672 0.65866815
+ 2.35357302 0.73729573 0.83197717 1.04116098 0.93795867 2.994371
+ 0.61293981 1.00285604 0.61286045 0.56009374 0.88600371 0.7778755
+ 2.90971831 0.72884416 3.53501485 1.04383844 4.23606356 0.96194638
+ 1.12360507 1.15984896 1.2014377  0.6082209  0.85789084 1.53838917
+ 2.74264683 1.69289392 0.74585407 0.72678623 0.8816159  1.06617605
+ 0.92725286 0.99952369 2.88947721 0.90342718 1.2245499  0.74314514
+ 0.65184284 1.0422753  1.0930307  1.0665998  1.58545468 0.7188377
+ 1.03202445 1.21729389 0.67561244 0.89422763 1.95391919 1.75504461
+ 1.72877656 1.50004499 0.91002935 1.1702132  0.88728995 1.12332926
+ 1.56602777 1.2078359  0.74847802 4.13107875 0.62529986 1.29353164
+ 0.79693855 1.15430467 1.29331254 0.62010219 0.64780417 0.85131135
+ 1.22721658 0.70622021 0.56224234]
+
+Total time taken for covariance optimisation: 12.56 s
+
+2. Maxima detection
+Broadening coefficient: 1.0
+Selected method:        Trust-region Newton-Raphson
+Trust radius:           0.001
+Convergence threshold:  1e-06
+
+Point 0 converged in 36 steps
+Point 1 converged in 79 steps
+Point 2 converged in 27 steps
+Point 3 converged in 33 steps
+Point 4 converged in 174 steps
+Point 5 converged in 69 steps
+Point 6 converged in 84 steps
+Point 7 converged in 83 steps
+Point 8 converged in 27 steps
+Point 9 converged in 59 steps
+Point 10 converged in 53 steps
+Point 11 converged in 97 steps
+Point 12 converged in 256 steps
+Point 13 converged in 255 steps
+Point 14 converged in 53 steps
+Point 15 converged in 94 steps
+Point 16 converged in 137 steps
+Point 17 converged in 52 steps
+Point 18 converged in 110 steps
+Point 19 converged in 190 steps
+Point 20 converged in 96 steps
+Point 21 converged in 88 steps
+Point 22 converged in 241 steps
+Point 23 converged in 75 steps
+Point 24 converged in 338 steps
+Point 25 converged in 449 steps
+Point 26 converged in 225 steps
+Point 27 converged in 20 steps
+Point 28 converged in 409 steps
+Point 29 converged in 229 steps
+Point 30 converged in 312 steps
+Point 31 converged in 93 steps
+Point 32 converged in 588 steps
+Point 33 converged in 297 steps
+Point 34 converged in 110 steps
+Point 35 converged in 302 steps
+Point 36 converged in 78 steps
+Point 37 converged in 61 steps
+Point 38 converged in 189 steps
+Point 39 converged in 264 steps
+Point 40 converged in 47 steps
+Point 41 converged in 68 steps
+Point 42 converged in 251 steps
+Point 43 converged in 129 steps
+Point 44 converged in 349 steps
+Point 45 converged in 397 steps
+Point 46 converged in 47 steps
+Point 47 converged in 107 steps
+Point 48 converged in 152 steps
+Point 49 converged in 193 steps
+Point 50 converged in 18 steps
+Point 51 converged in 57 steps
+Point 52 converged in 107 steps
+Point 53 converged in 85 steps
+Point 54 converged in 197 steps
+Point 55 converged in 153 steps
+Point 56 converged in 209 steps
+Point 57 converged in 59 steps
+Point 58 converged in 13 steps
+Point 59 converged in 117 steps
+Point 60 converged in 61 steps
+Point 61 converged in 431 steps
+Point 62 converged in 165 steps
+Point 63 converged in 228 steps
+Point 64 converged in 157 steps
+Point 65 converged in 82 steps
+Point 66 converged in 389 steps
+Point 67 converged in 33 steps
+Point 68 converged in 90 steps
+Point 69 converged in 209 steps
+Point 70 converged in 272 steps
+Point 71 converged in 80 steps
+Point 72 converged in 91 steps
+Point 73 converged in 19 steps
+Point 74 converged in 266 steps
+Point 75 converged in 91 steps
+Point 76 converged in 258 steps
+Point 77 converged in 143 steps
+Point 78 converged in 187 steps
+Point 79 converged in 58 steps
+Point 80 converged in 61 steps
+Point 81 converged in 150 steps
+Point 82 converged in 116 steps
+Point 83 converged in 145 steps
+Point 84 converged in 122 steps
+Point 85 converged in 50 steps
+Point 86 converged in 80 steps
+Point 87 converged in 62 steps
+Point 88 converged in 46 steps
+Point 89 converged in 59 steps
+Point 90 converged in 68 steps
+Point 91 converged in 264 steps
+Point 92 converged in 132 steps
+Point 93 converged in 55 steps
+Point 94 converged in 110 steps
+Point 95 converged in 246 steps
+Point 96 converged in 258 steps
+Point 97 converged in 47 steps
+Point 98 converged in 230 steps
+Point 99 converged in 14 steps
+Point 100 converged in 57 steps
+Point 101 converged in 114 steps
+Point 102 converged in 417 steps
+Point 103 converged in 305 steps
+Point 104 converged in 99 steps
+Point 105 converged in 141 steps
+Point 106 converged in 115 steps
+Point 107 converged in 189 steps
+Point 108 converged in 63 steps
+Point 109 converged in 16 steps
+Point 110 converged in 229 steps
+Point 111 converged in 221 steps
+Point 112 converged in 34 steps
+Point 113 converged in 408 steps
+Point 114 converged in 242 steps
+Point 115 converged in 31 steps
+Point 116 converged in 176 steps
+Point 117 converged in 131 steps
+Point 118 converged in 280 steps
+Point 119 converged in 181 steps
+Point 120 converged in 13 steps
+Point 121 converged in 227 steps
+Point 122 converged in 45 steps
+Point 123 converged in 188 steps
+Point 124 converged in 150 steps
+Point 125 converged in 323 steps
+Point 126 converged in 305 steps
+Point 127 converged in 237 steps
+Point 128 converged in 190 steps
+Point 129 converged in 70 steps
+Point 130 converged in 251 steps
+Point 131 converged in 61 steps
+Point 132 converged in 152 steps
+Point 133 converged in 62 steps
+Point 134 converged in 13 steps
+Point 135 converged in 33 steps
+Point 136 converged in 173 steps
+Point 137 converged in 261 steps
+Point 138 converged in 69 steps
+Point 139 converged in 44 steps
+Point 140 converged in 45 steps
+Point 141 converged in 207 steps
+Point 142 converged in 129 steps
+Point 143 converged in 256 steps
+Point 144 converged in 177 steps
+Point 145 converged in 240 steps
+Point 146 converged in 342 steps
+Point 147 converged in 140 steps
+Point 148 converged in 175 steps
+Point 149 converged in 330 steps
+Point 150 converged in 109 steps
+Point 151 converged in 291 steps
+Point 152 converged in 419 steps
+Point 153 converged in 44 steps
+Point 154 converged in 38 steps
+Point 155 converged in 151 steps
+Point 156 converged in 21 steps
+Point 157 converged in 150 steps
+Point 158 converged in 202 steps
+Point 159 converged in 33 steps
+Point 160 converged in 342 steps
+Point 161 converged in 26 steps
+Point 162 converged in 130 steps
+Point 163 converged in 207 steps
+Point 164 converged in 232 steps
+Point 165 converged in 98 steps
+Point 166 converged in 12 steps
+Point 167 converged in 290 steps
+Point 168 converged in 113 steps
+Point 169 converged in 66 steps
+Point 170 converged in 106 steps
+Point 171 converged in 200 steps
+Point 172 converged in 110 steps
+Point 173 converged in 69 steps
+Point 174 converged in 176 steps
+Point 175 converged in 120 steps
+Point 176 converged in 78 steps
+Point 177 converged in 38 steps
+Point 178 converged in 364 steps
+Point 179 converged in 49 steps
+Point 180 converged in 141 steps
+Point 181 converged in 301 steps
+Point 182 converged in 69 steps
+Point 183 converged in 58 steps
+Point 184 converged in 114 steps
+Point 185 converged in 118 steps
+Point 186 converged in 8 steps
+Point 187 converged in 179 steps
+Point 188 converged in 134 steps
+Point 189 converged in 40 steps
+Point 190 converged in 154 steps
+Point 191 converged in 81 steps
+Point 192 converged in 272 steps
+Point 193 converged in 51 steps
+Point 194 converged in 231 steps
+Point 195 converged in 81 steps
+Point 196 converged in 70 steps
+Point 197 converged in 133 steps
+Point 198 converged in 133 steps
+Point 199 converged in 46 steps
+Point 200 converged in 86 steps
+Point 201 converged in 100 steps
+Point 202 converged in 34 steps
+Point 203 converged in 232 steps
+Point 204 converged in 39 steps
+Point 205 converged in 119 steps
+Point 206 converged in 101 steps
+Point 207 converged in 160 steps
+Point 208 converged in 326 steps
+Point 209 converged in 143 steps
+Point 210 converged in 48 steps
+Point 211 converged in 88 steps
+Point 212 converged in 143 steps
+Point 213 converged in 36 steps
+Point 214 converged in 83 steps
+Point 215 converged in 55 steps
+Point 216 converged in 149 steps
+Point 217 converged in 119 steps
+Point 218 converged in 32 steps
+Point 219 converged in 100 steps
+Point 220 converged in 343 steps
+Point 221 converged in 108 steps
+Point 222 converged in 42 steps
+Point 223 converged in 362 steps
+Point 224 converged in 54 steps
+Point 225 converged in 33 steps
+Point 226 converged in 51 steps
+Point 227 converged in 194 steps
+Point 228 converged in 118 steps
+Point 229 converged in 409 steps
+Point 230 converged in 136 steps
+Point 231 converged in 116 steps
+Point 232 converged in 145 steps
+Point 233 converged in 233 steps
+Point 234 converged in 83 steps
+Point 235 converged in 248 steps
+Point 236 converged in 46 steps
+Point 237 converged in 59 steps
+Point 238 converged in 88 steps
+Point 239 converged in 117 steps
+Point 240 converged in 101 steps
+Point 241 converged in 236 steps
+Point 242 converged in 139 steps
+Point 243 converged in 164 steps
+Point 244 converged in 32 steps
+Point 245 converged in 193 steps
+Point 246 converged in 58 steps
+Point 247 converged in 330 steps
+Point 248 converged in 65 steps
+Point 249 converged in 156 steps
+Point 250 converged in 26 steps
+Point 251 converged in 116 steps
+Point 252 converged in 210 steps
+Point 253 converged in 134 steps
+Point 254 converged in 634 steps
+Point 255 converged in 157 steps
+Point 256 converged in 53 steps
+Point 257 converged in 104 steps
+Point 258 converged in 87 steps
+Point 259 converged in 86 steps
+Point 260 converged in 126 steps
+Point 261 converged in 58 steps
+Point 262 converged in 137 steps
+Point 263 converged in 268 steps
+Point 264 converged in 98 steps
+Point 265 converged in 362 steps
+Point 266 converged in 25 steps
+Point 267 converged in 19 steps
+Point 268 converged in 53 steps
+Point 269 converged in 208 steps
+Point 270 converged in 9 steps
+Point 271 converged in 50 steps
+Point 272 converged in 180 steps
+Point 273 converged in 83 steps
+Point 274 converged in 268 steps
+Point 275 converged in 11 steps
+Point 276 converged in 241 steps
+Point 277 converged in 92 steps
+Point 278 converged in 15 steps
+Point 279 converged in 269 steps
+Point 280 converged in 287 steps
+Point 281 converged in 123 steps
+Point 282 converged in 313 steps
+Point 283 converged in 25 steps
+Point 284 converged in 246 steps
+Point 285 converged in 332 steps
+Point 286 converged in 183 steps
+Point 287 converged in 207 steps
+Point 288 converged in 196 steps
+Point 289 converged in 106 steps
+Point 290 converged in 23 steps
+Point 291 converged in 264 steps
+Point 292 converged in 56 steps
+Point 293 converged in 41 steps
+Point 294 converged in 286 steps
+Point 295 converged in 241 steps
+Point 296 converged in 118 steps
+Point 297 converged in 13 steps
+Point 298 converged in 259 steps
+Point 299 converged in 94 steps
+Point 300 converged in 184 steps
+Point 301 converged in 322 steps
+Point 302 converged in 156 steps
+Point 303 converged in 17 steps
+Point 304 converged in 32 steps
+Point 305 converged in 93 steps
+Point 306 converged in 33 steps
+Point 307 converged in 15 steps
+Point 308 converged in 37 steps
+Point 309 converged in 35 steps
+Point 310 converged in 34 steps
+Point 311 converged in 217 steps
+Point 312 converged in 36 steps
+Point 313 converged in 138 steps
+Point 314 converged in 67 steps
+Point 315 converged in 100 steps
+Point 316 converged in 421 steps
+Point 317 converged in 259 steps
+Point 318 converged in 75 steps
+Point 319 converged in 496 steps
+Point 320 converged in 46 steps
+Point 321 converged in 42 steps
+Point 322 converged in 42 steps
+Point 323 converged in 38 steps
+Point 324 converged in 367 steps
+Point 325 converged in 55 steps
+Point 326 converged in 93 steps
+Point 327 converged in 102 steps
+Point 328 converged in 233 steps
+Point 329 converged in 40 steps
+Point 330 converged in 178 steps
+Point 331 converged in 98 steps
+Point 332 converged in 158 steps
+Point 333 converged in 132 steps
+Point 334 converged in 71 steps
+Point 335 converged in 101 steps
+Point 336 converged in 200 steps
+Point 337 converged in 157 steps
+Point 338 converged in 224 steps
+Point 339 converged in 135 steps
+Point 340 converged in 142 steps
+Point 341 converged in 43 steps
+Point 342 converged in 187 steps
+Point 343 converged in 63 steps
+Point 344 converged in 124 steps
+Point 345 converged in 56 steps
+Point 346 converged in 247 steps
+Point 347 converged in 226 steps
+Point 348 converged in 154 steps
+Point 349 converged in 102 steps
+Point 350 converged in 147 steps
+Point 351 converged in 321 steps
+Point 352 converged in 204 steps
+Point 353 converged in 229 steps
+Point 354 converged in 72 steps
+Point 355 converged in 24 steps
+Point 356 converged in 34 steps
+Point 357 converged in 60 steps
+Point 358 converged in 278 steps
+Point 359 converged in 53 steps
+Point 360 converged in 17 steps
+Point 361 converged in 203 steps
+Point 362 converged in 91 steps
+Point 363 converged in 71 steps
+Point 364 converged in 36 steps
+Point 365 converged in 156 steps
+Point 366 converged in 64 steps
+Point 367 converged in 202 steps
+Point 368 converged in 70 steps
+Point 369 converged in 491 steps
+Point 370 converged in 169 steps
+Point 371 converged in 367 steps
+Point 372 converged in 65 steps
+Point 373 converged in 142 steps
+Point 374 converged in 65 steps
+Point 375 converged in 378 steps
+Point 376 converged in 63 steps
+Point 377 converged in 38 steps
+Point 378 converged in 277 steps
+Point 379 converged in 47 steps
+Point 380 converged in 181 steps
+Point 381 converged in 86 steps
+Point 382 converged in 58 steps
+Point 383 converged in 301 steps
+Point 384 converged in 108 steps
+Point 385 converged in 188 steps
+Point 386 converged in 166 steps
+Point 387 converged in 194 steps
+Point 388 converged in 88 steps
+Point 389 converged in 27 steps
+Point 390 converged in 90 steps
+Point 391 converged in 38 steps
+Point 392 converged in 102 steps
+Point 393 converged in 147 steps
+Point 394 converged in 113 steps
+Point 395 converged in 97 steps
+Point 396 converged in 113 steps
+Point 397 converged in 85 steps
+Point 398 converged in 75 steps
+Point 399 converged in 219 steps
+Point 400 converged in 117 steps
+Point 401 converged in 138 steps
+Point 402 converged in 218 steps
+Point 403 converged in 108 steps
+Point 404 converged in 18 steps
+Point 405 converged in 72 steps
+Point 406 converged in 313 steps
+Point 407 converged in 118 steps
+Point 408 converged in 92 steps
+Point 409 converged in 85 steps
+Point 410 converged in 40 steps
+Point 411 converged in 460 steps
+Point 412 converged in 79 steps
+Point 413 converged in 182 steps
+Point 414 converged in 51 steps
+Point 415 converged in 47 steps
+Point 416 converged in 68 steps
+Point 417 converged in 41 steps
+Point 418 converged in 261 steps
+Point 419 converged in 85 steps
+Point 420 converged in 410 steps
+Point 421 converged in 62 steps
+Point 422 converged in 238 steps
+Point 423 converged in 90 steps
+Point 424 converged in 78 steps
+Point 425 converged in 98 steps
+Point 426 converged in 455 steps
+Point 427 converged in 378 steps
+Point 428 converged in 72 steps
+Point 429 converged in 141 steps
+Point 430 converged in 22 steps
+Point 431 converged in 159 steps
+Point 432 converged in 65 steps
+Point 433 converged in 143 steps
+Point 434 converged in 87 steps
+Point 435 converged in 129 steps
+Point 436 converged in 94 steps
+Point 437 converged in 167 steps
+Point 438 converged in 362 steps
+Point 439 converged in 76 steps
+Point 440 converged in 133 steps
+Point 441 converged in 33 steps
+Point 442 converged in 138 steps
+Point 443 converged in 7 steps
+Point 444 converged in 113 steps
+Point 445 converged in 24 steps
+Point 446 converged in 192 steps
+Point 447 converged in 238 steps
+Point 448 converged in 64 steps
+Point 449 converged in 135 steps
+Point 450 converged in 76 steps
+Point 451 converged in 216 steps
+Point 452 converged in 40 steps
+Point 453 converged in 121 steps
+Point 454 converged in 220 steps
+Point 455 converged in 152 steps
+Point 456 converged in 95 steps
+Point 457 converged in 153 steps
+Point 458 converged in 46 steps
+Point 459 converged in 59 steps
+Point 460 converged in 115 steps
+Point 461 converged in 27 steps
+Point 462 converged in 126 steps
+Point 463 converged in 25 steps
+Point 464 converged in 9 steps
+Point 465 converged in 63 steps
+Point 466 converged in 334 steps
+Point 467 converged in 47 steps
+Point 468 converged in 252 steps
+Point 469 converged in 398 steps
+Point 470 converged in 296 steps
+Point 471 converged in 64 steps
+Point 472 converged in 148 steps
+Point 473 converged in 43 steps
+Point 474 converged in 108 steps
+Point 475 converged in 193 steps
+Point 476 converged in 389 steps
+Point 477 converged in 272 steps
+Point 478 converged in 36 steps
+Point 479 converged in 9 steps
+Point 480 converged in 37 steps
+Point 481 converged in 309 steps
+Point 482 converged in 213 steps
+Point 483 converged in 350 steps
+Point 484 converged in 190 steps
+Point 485 converged in 75 steps
+Point 486 converged in 226 steps
+Point 487 converged in 259 steps
+Point 488 converged in 78 steps
+Point 489 converged in 20 steps
+Point 490 converged in 19 steps
+Point 491 converged in 48 steps
+Point 492 converged in 49 steps
+Point 493 converged in 288 steps
+Point 494 converged in 116 steps
+Point 495 converged in 276 steps
+Point 496 converged in 91 steps
+Point 497 converged in 36 steps
+Point 498 converged in 67 steps
+Point 499 converged in 11 steps
+Point 500 converged in 79 steps
+Point 501 converged in 250 steps
+Point 502 converged in 124 steps
+Point 503 converged in 207 steps
+Point 504 converged in 27 steps
+Point 505 converged in 129 steps
+Point 506 converged in 70 steps
+Point 507 converged in 369 steps
+Point 508 converged in 72 steps
+Point 509 converged in 99 steps
+Point 510 converged in 62 steps
+Point 511 converged in 275 steps
+Point 512 converged in 97 steps
+Point 513 converged in 178 steps
+Point 514 converged in 272 steps
+Point 515 converged in 19 steps
+Point 516 converged in 265 steps
+Point 517 converged in 122 steps
+Point 518 converged in 246 steps
+Point 519 converged in 84 steps
+Point 520 converged in 161 steps
+Point 521 converged in 15 steps
+Point 522 converged in 106 steps
+Point 523 converged in 180 steps
+Point 524 converged in 107 steps
+Point 525 converged in 173 steps
+Point 526 converged in 213 steps
+Point 527 converged in 229 steps
+Point 528 converged in 315 steps
+Point 529 converged in 97 steps
+Point 530 converged in 169 steps
+Point 531 converged in 33 steps
+Point 532 converged in 16 steps
+Point 533 converged in 10 steps
+Point 534 converged in 118 steps
+Point 535 converged in 89 steps
+Point 536 converged in 216 steps
+Point 537 converged in 327 steps
+Point 538 converged in 84 steps
+Point 539 converged in 130 steps
+Point 540 converged in 37 steps
+Point 541 converged in 32 steps
+Point 542 converged in 189 steps
+Point 543 converged in 248 steps
+Point 544 converged in 171 steps
+Point 545 converged in 98 steps
+Point 546 converged in 143 steps
+Point 547 converged in 33 steps
+Point 548 converged in 140 steps
+Point 549 converged in 164 steps
+Point 550 converged in 274 steps
+Point 551 converged in 111 steps
+Point 552 converged in 109 steps
+Point 553 converged in 60 steps
+Point 554 converged in 104 steps
+Point 555 converged in 61 steps
+Point 556 converged in 125 steps
+Point 557 converged in 45 steps
+Point 558 converged in 86 steps
+Point 559 converged in 111 steps
+Point 560 converged in 110 steps
+Point 561 converged in 60 steps
+Point 562 converged in 39 steps
+Point 563 converged in 115 steps
+Point 564 converged in 83 steps
+Point 565 converged in 54 steps
+Point 566 converged in 40 steps
+Point 567 converged in 91 steps
+Point 568 converged in 32 steps
+Point 569 converged in 98 steps
+Point 570 converged in 220 steps
+Point 571 converged in 64 steps
+Point 572 converged in 62 steps
+Point 573 converged in 253 steps
+Point 574 converged in 284 steps
+Point 575 converged in 212 steps
+Point 576 converged in 37 steps
+Point 577 converged in 280 steps
+Point 578 converged in 14 steps
+Point 579 converged in 12 steps
+Point 580 converged in 181 steps
+Point 581 converged in 77 steps
+Point 582 converged in 231 steps
+Point 583 converged in 79 steps
+Point 584 converged in 50 steps
+Point 585 converged in 98 steps
+Point 586 converged in 329 steps
+Point 587 converged in 130 steps
+Point 588 converged in 168 steps
+Point 589 converged in 175 steps
+Point 590 converged in 393 steps
+Point 591 converged in 36 steps
+Point 592 converged in 125 steps
+Point 593 converged in 135 steps
+Point 594 converged in 284 steps
+Point 595 converged in 168 steps
+Point 596 converged in 111 steps
+Point 597 converged in 107 steps
+Point 598 converged in 206 steps
+Point 599 converged in 259 steps
+Point 600 converged in 208 steps
+Point 601 converged in 158 steps
+Point 602 converged in 207 steps
+Point 603 converged in 147 steps
+Point 604 converged in 379 steps
+Point 605 converged in 76 steps
+Point 606 converged in 105 steps
+Point 607 converged in 123 steps
+Point 608 converged in 88 steps
+Point 609 converged in 168 steps
+Point 610 converged in 198 steps
+Point 611 converged in 82 steps
+Point 612 converged in 277 steps
+Point 613 converged in 193 steps
+Point 614 converged in 52 steps
+Point 615 converged in 178 steps
+Point 616 converged in 19 steps
+Point 617 converged in 162 steps
+Point 618 converged in 44 steps
+Point 619 converged in 378 steps
+Point 620 converged in 84 steps
+Point 621 converged in 129 steps
+Point 622 converged in 127 steps
+Point 623 converged in 220 steps
+Point 624 converged in 234 steps
+Point 625 converged in 405 steps
+Point 626 converged in 110 steps
+Point 627 converged in 612 steps
+Point 628 converged in 89 steps
+Point 629 converged in 228 steps
+Point 630 converged in 114 steps
+Point 631 converged in 368 steps
+Point 632 converged in 272 steps
+Point 633 converged in 37 steps
+Point 634 converged in 55 steps
+Point 635 converged in 191 steps
+Point 636 converged in 114 steps
+Point 637 converged in 76 steps
+Point 638 converged in 19 steps
+
+Initial labels
+[5 5 1 5 1 1 1 1 1 5 1 5 1 4 5 1 1 5 5 5 5 1 1 5 1 1 1 5 1 1 5 5 1 1 1 5 1
+ 1 5 5 1 5 5 1 5 1 1 1 5 1 5 1 1 5 5 1 1 1 1 1 5 5 1 1 5 1 1 3 1 1 5 1 5 5
+ 1 1 1 5 5 5 1 5 1 5 5 1 5 1 5 5 5 2 4 5 1 5 5 5 1 1 5 5 1 1 5 5 1 1 5 1 2
+ 4 5 1 5 5 1 4 5 1 5 5 3 1 5 1 5 5 5 4 5 3 4 1 1 5 5 5 5 5 1 5 1 1 5 5 5 5
+ 5 1 5 5 1 1 2 1 1 5 5 5 1 1 1 5 1 1 1 1 4 1 1 1 5 1 1 1 5 5 5 5 5 1 5 5 1
+ 1 0 5 4 5 1 5 1 3 5 5 5 1 2 5 1 1 5 5 2 1 1 5 1 5 3 1 5 1 5 3 1 2 1 1 5 1
+ 1 5 1 5 3 1 5 1 5 1 5 5 5 5 5 1 5 2 1 1 1 1 1 5 5 1 5 5 1 1 1 5 1 1 1 5 5
+ 4 4 5 5 5 5 1 5 1 5 5 1 1 5 5 1 1 1 5 1 5 1 5 1 5 5 5 1 5 4 5 5 1 5 1 5 1
+ 1 5 1 1 1 5 4 5 1 5 4 1 5 4 5 5 5 5 5 1 1 5 5 5 1 5 1 4 1 1 4 1 1 1 2 1 1
+ 5 1 1 5 1 1 1 5 5 1 1 5 1 1 5 1 1 1 5 1 5 1 1 4 3 1 1 2 5 1 1 5 5 4 5 5 1
+ 1 5 1 1 5 5 5 1 5 1 5 5 5 5 5 5 5 5 1 1 4 5 1 5 1 5 5 5 1 5 5 1 5 1 5 1 5
+ 1 1 1 1 1 1 5 1 5 5 5 5 5 5 1 5 5 5 5 1 5 4 1 1 5 1 1 5 1 1 1 1 2 5 1 5 5
+ 1 1 5 5 1 1 5 5 1 5 5 1 1 5 5 5 5 5 3 1 1 5 4 1 1 4 1 3 1 5 5 5 1 1 1 1 5
+ 5 5 1 1 5 5 1 3 1 5 5 5 5 1 5 5 1 1 1 1 1 1 4 6 1 5 1 2 1 5 5 1 5 1 3 5 1
+ 5 5 1 5 5 5 1 5 5 5 1 5 5 1 1 1 2 5 3 5 1 5 1 1 1 1 1 1 5 1 5 4 5 5 5 1 5
+ 1 1 1 1 1 5 5 4 1 5 5 1 1 1 1 4 1 5 5 1 2 1 1 5 1 5 1 2 5 6 1 4 5 5 5 1 1
+ 1 1 4 5 5 1 5 1 1 1 2 5 1 5 1 5 5 5 5 5 5 1 1 5 4 1 3 5 1 1 5 1 5 1 5 1 1
+ 1 5 1 1 1 1 1 1 5 1]
+
+Total time taken for maxima detection: 25.47 s
+
+3. Cluster merging
+Merging threshold:     0.36787944117144233
+Selected method:       Smith + Trust-region Newton-Raphson
+Trust radius:          0.001
+Convergence threshold: 1e-06
+
+Saddle search between clusters  1 and  0 succeeded in 47 steps
+Saddle search between clusters  2 and  0 succeeded in 81 steps
+Saddle search between clusters  2 and  1 succeeded in 124 steps
+Saddle search between clusters  3 and  0 terminated after 1 steps
+Saddle search between clusters  3 and  1 succeeded in 68 steps
+Saddle search between clusters  3 and  2 terminated after 1 steps
+Saddle search between clusters  4 and  0 terminated after 1 steps
+Saddle search between clusters  4 and  1 terminated after 100 steps
+Saddle search between clusters  4 and  2 succeeded in 14 steps
+Saddle search between clusters  4 and  3 terminated after 1 steps
+Saddle search between clusters  5 and  0 terminated after 1 steps
+Saddle search between clusters  5 and  1 succeeded in 11 steps
+Saddle search between clusters  5 and  2 terminated after 1 steps
+Saddle search between clusters  5 and  3 succeeded in 16 steps
+Saddle search between clusters  5 and  4 terminated after 171 steps
+Saddle search between clusters  6 and  0 terminated after 1 steps
+Saddle search between clusters  6 and  1 terminated after 1 steps
+Saddle search between clusters  6 and  2 terminated after 1 steps
+Saddle search between clusters  6 and  3 terminated after 1 steps
+Saddle search between clusters  6 and  4 succeeded in 20 steps
+Saddle search between clusters  6 and  5 succeeded in 19 steps
+
+Clusters  4 and  2 merged with value 0.9921
+Clusters  6 and  4 merged with value 0.974
+Clusters  5 and  3 merged with value 0.927
+Clusters  2 and  0 merged with value 0.904
+
+Merged labels
+[1 1 0 1 0 0 0 0 0 1 0 1 0 2 1 0 0 1 1 1 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1 0
+ 0 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1 1 0 0 1 0 0 1 0 0 1 0 1 1
+ 0 0 0 1 1 1 0 1 0 1 1 0 1 0 1 1 1 2 2 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 1 0 2
+ 2 1 0 1 1 0 2 1 0 1 1 1 0 1 0 1 1 1 2 1 1 2 0 0 1 1 1 1 1 0 1 0 0 1 1 1 1
+ 1 0 1 1 0 0 2 0 0 1 1 1 0 0 0 1 0 0 0 0 2 0 0 0 1 0 0 0 1 1 1 1 1 0 1 1 0
+ 0 2 1 2 1 0 1 0 1 1 1 1 0 2 1 0 0 1 1 2 0 0 1 0 1 1 0 1 0 1 1 0 2 0 0 1 0
+ 0 1 0 1 1 0 1 0 1 0 1 1 1 1 1 0 1 2 0 0 0 0 0 1 1 0 1 1 0 0 0 1 0 0 0 1 1
+ 2 2 1 1 1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 0 1 0 1 0 1 1 1 0 1 2 1 1 0 1 0 1 0
+ 0 1 0 0 0 1 2 1 0 1 2 0 1 2 1 1 1 1 1 0 0 1 1 1 0 1 0 2 0 0 2 0 0 0 2 0 0
+ 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 0 2 1 0 0 2 1 0 0 1 1 2 1 1 0
+ 0 1 0 0 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 0 2 1 0 1 0 1 1 1 0 1 1 0 1 0 1 0 1
+ 0 0 0 0 0 0 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 2 0 0 1 0 0 1 0 0 0 0 2 1 0 1 1
+ 0 0 1 1 0 0 1 1 0 1 1 0 0 1 1 1 1 1 1 0 0 1 2 0 0 2 0 1 0 1 1 1 0 0 0 0 1
+ 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1 1 0 0 0 0 0 0 2 2 0 1 0 2 0 1 1 0 1 0 1 1 0
+ 1 1 0 1 1 1 0 1 1 1 0 1 1 0 0 0 2 1 1 1 0 1 0 0 0 0 0 0 1 0 1 2 1 1 1 0 1
+ 0 0 0 0 0 1 1 2 0 1 1 0 0 0 0 2 0 1 1 0 2 0 0 1 0 1 0 2 1 2 0 2 1 1 1 0 0
+ 0 0 2 1 1 0 1 0 0 0 2 1 0 1 0 1 1 1 1 1 1 0 0 1 2 0 1 1 0 0 1 0 1 0 1 0 0
+ 0 1 0 0 0 0 0 0 1 0]
+
+Total time taken for cluster merging: 0.6467 s
+
+4. Outlier detection
+Outlier threshold:   0.0
+
+Final labels
+[1 1 0 1 0 0 0 0 0 1 0 1 0 2 1 0 0 1 1 1 1 0 0 1 0 0 0 1 0 0 1 1 0 0 0 1 0
+ 0 1 1 0 1 1 0 1 0 0 0 1 0 1 0 0 1 1 0 0 0 0 0 1 1 0 0 1 0 0 1 0 0 1 0 1 1
+ 0 0 0 1 1 1 0 1 0 1 1 0 1 0 1 1 1 2 2 1 0 1 1 1 0 0 1 1 0 0 1 1 0 0 1 0 2
+ 2 1 0 1 1 0 2 1 0 1 1 1 0 1 0 1 1 1 2 1 1 2 0 0 1 1 1 1 1 0 1 0 0 1 1 1 1
+ 1 0 1 1 0 0 2 0 0 1 1 1 0 0 0 1 0 0 0 0 2 0 0 0 1 0 0 0 1 1 1 1 1 0 1 1 0
+ 0 2 1 2 1 0 1 0 1 1 1 1 0 2 1 0 0 1 1 2 0 0 1 0 1 1 0 1 0 1 1 0 2 0 0 1 0
+ 0 1 0 1 1 0 1 0 1 0 1 1 1 1 1 0 1 2 0 0 0 0 0 1 1 0 1 1 0 0 0 1 0 0 0 1 1
+ 2 2 1 1 1 1 0 1 0 1 1 0 0 1 1 0 0 0 1 0 1 0 1 0 1 1 1 0 1 2 1 1 0 1 0 1 0
+ 0 1 0 0 0 1 2 1 0 1 2 0 1 2 1 1 1 1 1 0 0 1 1 1 0 1 0 2 0 0 2 0 0 0 2 0 0
+ 1 0 0 1 0 0 0 1 1 0 0 1 0 0 1 0 0 0 1 0 1 0 0 2 1 0 0 2 1 0 0 1 1 2 1 1 0
+ 0 1 0 0 1 1 1 0 1 0 1 1 1 1 1 1 1 1 0 0 2 1 0 1 0 1 1 1 0 1 1 0 1 0 1 0 1
+ 0 0 0 0 0 0 1 0 1 1 1 1 1 1 0 1 1 1 1 0 1 2 0 0 1 0 0 1 0 0 0 0 2 1 0 1 1
+ 0 0 1 1 0 0 1 1 0 1 1 0 0 1 1 1 1 1 1 0 0 1 2 0 0 2 0 1 0 1 1 1 0 0 0 0 1
+ 1 1 0 0 1 1 0 1 0 1 1 1 1 0 1 1 0 0 0 0 0 0 2 2 0 1 0 2 0 1 1 0 1 0 1 1 0
+ 1 1 0 1 1 1 0 1 1 1 0 1 1 0 0 0 2 1 1 1 0 1 0 0 0 0 0 0 1 0 1 2 1 1 1 0 1
+ 0 0 0 0 0 1 1 2 0 1 1 0 0 0 0 2 0 1 1 0 2 0 0 1 0 1 0 2 1 2 0 2 1 1 1 0 0
+ 0 0 2 1 1 0 1 0 0 0 2 1 0 1 0 1 1 1 1 1 1 0 0 1 2 0 1 1 0 0 1 0 1 0 1 0 0
+ 0 1 0 0 0 0 0 0 1 0]
+Final labels saved in nb_80.lab.npy
+
+Total time taken for fitting: 38.84 s
