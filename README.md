@@ -9,9 +9,9 @@ Steps to run:
    (link against your LAPACK and BLAS installations, example provided in build.sh)
 3. Import the algorithm and have fun!
 
-The interface follows the scikit-learn template.
+The code is compatible with the scikit-learn clustering interface.
 
-Example: <br>
+**Example:** <br>
 from clustering import Donkey <br>
 data = ... <br>
 clus = Donkey() <br>
