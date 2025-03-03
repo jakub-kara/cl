@@ -11,9 +11,14 @@ Steps to run:
 
 The interface follows the scikit-learn template.
 
-Example:\n
+Example:
+
 from clustering import Donkey
+
 data = ...
+
 clus = Donkey()
+
 clus.fit(data)
+
 labels = clus.labels_
